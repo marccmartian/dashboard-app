@@ -3,7 +3,8 @@ import './App.css';
 import GlobalCss from './components/globalCss';
 import { ServicesList } from './features/services/ServicesList';
 import { SelectForm } from './components/SelectForm';
-import { MainHeader, DivCenter } from './components/styledComponents';
+import { DateButtons } from './components/DateButtons'
+import { MainHeader, DivCenter, HeaderResponsive } from './components/styledComponents';
 
 function App() {
   return (
@@ -12,7 +13,10 @@ function App() {
 
       <MainHeader>
         <DivCenter>
-          <SelectForm />
+          <HeaderResponsive>
+            <SelectForm />
+            <DateButtons />
+          </HeaderResponsive>
         </DivCenter>
       </MainHeader>
 

@@ -6,6 +6,13 @@ export const CardContainer = styled.article`
   border-radius: 6px;
   box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.30);
   position: relative;
+  
+  @media ( max-width: 400px){
+    margin-bottom: 30px;
+  }
+  @media ( min-width: 401px) and (max-width: 960px) {
+    margin: 0 auto;
+  }
 `;
 
 export const ContentContainer = styled.div`

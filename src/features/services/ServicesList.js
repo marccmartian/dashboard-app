@@ -2,9 +2,11 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Card } from '../../components/Card';
 import { fetchServices } from '../../app/api'
+import { MainContainer } from '../../components/styledComponents';
 
 export const ServicesList = () => {
   const services = useSelector(state => state.services.cards)
+  const selectedDate = useSelector(state => state.services.selectedDate)
 
   const dispatch = useDispatch();
 
@@ -13,9 +15,9 @@ export const ServicesList = () => {
   }, []);
 
   return (
-    <>
+    <MainContainer>
       {
-        services.map(service => <Card
+        services.filter(card => card.release_date.includes(selectedDate)).map(service => <Card
           key={service.id}
           title={service.title}
           subscriptionCost={service.subscription_cost}
@@ -26,6 +28,6 @@ export const ServicesList = () => {
           totalViews={service.total_views}
         />)
       }
-    </>
+    </MainContainer>
   )
 }
