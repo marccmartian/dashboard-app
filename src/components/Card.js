@@ -1,8 +1,8 @@
 import React from 'react';
 import { CardContainer, ContentContainer, CardTitle, CardContent, Circle, CardProgress, CardFooter } from './CardStyled'
-import { ReactComponent as DollarIcon } from '../../images/money.svg';
-import { ReactComponent as UsersIcon } from '../../images/users.svg';
-import { ReactComponent as ViewsIcon } from '../../images/views.svg';
+import { ReactComponent as DollarIcon } from '../images/money.svg';
+import { ReactComponent as UsersIcon } from '../images/users.svg';
+import { ReactComponent as ViewsIcon } from '../images/views.svg';
 
 export const Card = ({ title, subscriptionCost, status, totalSubscription, totalVacancies, totalEarned, totalViews }) => {
   return (
